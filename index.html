@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>시작 페이지</title>
+  <!-- Google Fonts: Noto Sans KR -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header Section -->
+  <header class="header">
+    <div class="logo-area">
+      <a href="#" class="logo-link" title="서울디지털대학교">
+        <span class="logo-sdu">SDU</span>
+        <span class="logo-name">서울디지털대학교</span>
+      </a>
+    </div>
+
+    <div class="weather-area">
+      <div class="weather-badge" id="weather-seoul" title="서울 실시간 날씨">
+        <span class="weather-text">서울: <span class="temp">27.3°C</span> <span class="condition">대체로 맑음</span></span>
+        <span class="weather-icon">🌤️</span>
+      </div>
+      <div class="weather-badge" id="weather-jeju" title="제주 실시간 날씨">
+        <span class="weather-text">제주: <span class="temp">30.3°C</span> <span class="condition">흐림</span></span>
+        <span class="weather-icon">☁️</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content: Search Section -->
+  <main class="main-content">
+    <form class="search-form" id="search-form" action="https://www.google.com/search" method="GET" target="_blank">
+      <div class="search-bar">
+        <div class="search-icon">
+          <svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+          </svg>
+        </div>
+        <input 
+          type="text" 
+          id="search-input" 
+          name="q" 
+          placeholder="Google 검색" 
+          autocomplete="off" 
+          spellcheck="false"
+          autofocus
+        />
+        <button type="button" class="clear-btn" id="clear-btn" title="검색어 지우기" aria-label="지우기">
+          <svg viewBox="0 0 24 24" width="20" height="20">
+            <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" fill="#70757a"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="button-group">
+        <button type="submit" class="action-btn" id="btn-search">Google 검색</button>
+        <button type="button" class="action-btn" id="btn-lucky">I'm Feeling Lucky</button>
+      </div>
+    </form>
+  </main>
+
+  <!-- Footer Section: Quote -->
+  <footer class="footer">
+    <p class="quote-text" id="quote-display">
+      &ldquo;하루에 3시간을 걸으면 7년 후에 지구를 한바퀴 돌 수 있다.&rdquo; - 사무엘존슨
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
